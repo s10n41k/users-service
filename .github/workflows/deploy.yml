@@ -1,0 +1,20 @@
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    name: Rebuild & restart users-service
+    runs-on: self-hosted
+    environment: production
+    needs: []
+
+    steps:
+      - name: Rebuild and restart
+        env:
+          INFRA_DIR: ${{ secrets.INFRA_DIR }}
+        run: |
+          docker compose -f "$INFRA_DIR/docker-compose.yml" --project-directory "$INFRA_DIR" build --no-cache users-service
+          docker compose -f "$INFRA_DIR/docker-compose.yml" --project-directory "$INFRA_DIR" up -d users-service

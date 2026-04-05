@@ -1,0 +1,9 @@
+DELETE FROM user_roles;
+
+DROP TABLE IF EXISTS user_roles;
+
+DELETE FROM roles;
+
+DROP TABLE IF EXISTS roles;
+
+DROP TABLE IF EXISTS users;

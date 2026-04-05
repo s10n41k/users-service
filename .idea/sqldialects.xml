@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/app/internal/users/db/postgresql/postgresql.go" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/app/migrations/0001_create_users_tables.down.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/app/migrations/0001_create_users_tables.up.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/app/migrations/0002_add_subscription.down.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/app/migrations/0002_add_subscription.up.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/app/migrations/0003_add_subscription_notifications.down.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/app/migrations/0003_add_subscription_notifications.up.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/app/migrations/0004_create_friendships.down.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/app/migrations/0004_create_friendships.up.sql" dialect="GenericSQL" />
+  </component>
+</project>
