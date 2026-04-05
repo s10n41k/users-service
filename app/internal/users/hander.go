@@ -461,7 +461,7 @@ func (h *handler) FindOne(w http.ResponseWriter, r *http.Request) error {
 	ctx := r.Context()
 	user, err := h.service.FindOneUser(ctx, id)
 	if err != nil {
-		if errors.Is(err, sql.ErrNoRows) {
+		if errors.Is(err, errs.ErrUserNotFound) {
 			http.Error(w, "User not found", http.StatusNotFound)
 		} else {
 			http.Error(w, "Failed to retrieve user", http.StatusInternalServerError)
