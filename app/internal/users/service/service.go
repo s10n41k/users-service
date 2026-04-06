@@ -252,7 +252,7 @@ func (s *Service) FindOneUser(ctx context.Context, id string) (user model.UserTO
 		return user, err
 	}
 	if !ok {
-		return user, errors.New("user not found")
+		return user, errs.ErrUserNotFound
 	}
 	user, err = s.repositoryPostgres.FindOneUser(ctx, id)
 	if err != nil {

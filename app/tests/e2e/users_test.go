@@ -60,8 +60,7 @@ func TestCheckEmail_Free(t *testing.T) {
 	email := fmt.Sprintf("free_%d@example.com", uniqueSuffix())
 	req := signedReq(t, http.MethodGet, "/user/check-email/"+email, "", nil)
 	resp := do(t, req)
-	// Сервис возвращает ErrUserAlreadyExists если email свободен (ожидаем 409)
-	assert.Equal(t, http.StatusConflict, resp.StatusCode)
+	assert.Equal(t, http.StatusOK, resp.StatusCode)
 	resp.Body.Close()
 }
 
