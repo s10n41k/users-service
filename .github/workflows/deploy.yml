@@ -14,7 +14,7 @@ jobs:
     steps:
       - name: Rebuild and restart
         env:
-          INFRA_DIR: ${{ secrets.INFRA_DIR }}
+          INFRA_DIR: ${{ secrets.INFRA_PATH }}
         run: |
           docker compose -f "$INFRA_DIR/docker-compose.yml" --project-directory "$INFRA_DIR" build --no-cache users-service
           docker compose -f "$INFRA_DIR/docker-compose.yml" --project-directory "$INFRA_DIR" up -d users-service
